@@ -160,8 +160,10 @@ navigator.geolocation.getCurrentPosition(this.geoSuccess, this.geoError);
 
     self.focusMap(self.selfCentered);
 
-    //look at this to get the destination and starting points
-    //self.destination = new self.$store.state.google.maps.LatLng(self.selfCentered.lat, self.selfCentered.lng);
+    //set starting location if GPS is selected... develop this idea out more....
+    // give them the option to use browser GPS as starting point or to type/autocomplete their starting location?
+
+    self.starter = new self.$store.state.google.maps.LatLng(self.selfCentered.lat, self.selfCentered.lng);
 },
 
     geoError() {
